@@ -38,7 +38,7 @@ operator: add|divi|sub|mult;
 assignm_nl: assignment '\n';
 
 assignment:  var assign var operator var {printf("MOV A,[%s]\n",$3);printf("%s A,[%s]\n",$4,$5);printf("MOV [%s],A\n",$1);}
-  |var assign var {printf printf("MOV A,[%s]\n",$3);printf("MOV [%s],A\n",$1);};
+  |var assign var {printf("MOV A,[%s]\n",$3);printf("MOV [%s],A\n",$1);};
 
 /*more rules for other forms below - separated by | */
            
